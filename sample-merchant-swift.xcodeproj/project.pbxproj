@@ -14,6 +14,10 @@
 		5CC814FF1E32C80000198093 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CC814FD1E32C80000198093 /* LaunchScreen.storyboard */; };
 		5CC8150A1E32C80000198093 /* sample_merchant_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC815091E32C80000198093 /* sample_merchant_swiftTests.swift */; };
 		5CC815151E32C80000198093 /* sample_merchant_swiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC815141E32C80000198093 /* sample_merchant_swiftUITests.swift */; };
+		5CC815271E32D3DC00198093 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC815261E32D3DC00198093 /* main.swift */; };
+		5CC8152B1E32D4CA00198093 /* NativeCheckout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC815231E32CF0000198093 /* NativeCheckout.framework */; };
+		5CC8152C1E32D4CA00198093 /* NativeCheckout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC815231E32CF0000198093 /* NativeCheckout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5CC8152F1E32D64D00198093 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CC8152E1E32D64D00198093 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +37,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5CC8152D1E32D4CA00198093 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5CC8152C1E32D4CA00198093 /* NativeCheckout.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5CC814F11E32C80000198093 /* sample-merchant-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sample-merchant-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CC814F41E32C80000198093 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +65,10 @@
 		5CC815101E32C80000198093 /* sample-merchant-swiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sample-merchant-swiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CC815141E32C80000198093 /* sample_merchant_swiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sample_merchant_swiftUITests.swift; sourceTree = "<group>"; };
 		5CC815161E32C80000198093 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CC815231E32CF0000198093 /* NativeCheckout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NativeCheckout.framework; sourceTree = "<group>"; };
+		5CC815261E32D3DC00198093 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		5CC8152E1E32D64D00198093 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5CC815311E32DAC900198093 /* PYPLCheckoutBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PYPLCheckoutBridge.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CC8152B1E32D4CA00198093 /* NativeCheckout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +100,12 @@
 		5CC814E81E32C7FF00198093 = {
 			isa = PBXGroup;
 			children = (
+				5CC8152E1E32D64D00198093 /* Default-568h@2x.png */,
 				5CC814F31E32C80000198093 /* sample-merchant-swift */,
 				5CC815081E32C80000198093 /* sample-merchant-swiftTests */,
 				5CC815131E32C80000198093 /* sample-merchant-swiftUITests */,
 				5CC814F21E32C80000198093 /* Products */,
+				5CC815221E32CF0000198093 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +128,8 @@
 				5CC814FB1E32C80000198093 /* Assets.xcassets */,
 				5CC814FD1E32C80000198093 /* LaunchScreen.storyboard */,
 				5CC815001E32C80000198093 /* Info.plist */,
+				5CC815261E32D3DC00198093 /* main.swift */,
+				5CC815311E32DAC900198093 /* PYPLCheckoutBridge.h */,
 			);
 			path = "sample-merchant-swift";
 			sourceTree = "<group>";
@@ -125,6 +152,14 @@
 			path = "sample-merchant-swiftUITests";
 			sourceTree = "<group>";
 		};
+		5CC815221E32CF0000198093 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CC815231E32CF0000198093 /* NativeCheckout.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +170,7 @@
 				5CC814ED1E32C7FF00198093 /* Sources */,
 				5CC814EE1E32C7FF00198093 /* Frameworks */,
 				5CC814EF1E32C7FF00198093 /* Resources */,
+				5CC8152D1E32D4CA00198093 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -193,6 +229,7 @@
 				TargetAttributes = {
 					5CC814F01E32C7FF00198093 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 4279D5HCP4;
 						ProvisioningStyle = Automatic;
 					};
 					5CC815041E32C80000198093 = {
@@ -233,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CC814FF1E32C80000198093 /* LaunchScreen.storyboard in Resources */,
+				5CC8152F1E32D64D00198093 /* Default-568h@2x.png in Resources */,
 				5CC814FC1E32C80000198093 /* Assets.xcassets in Resources */,
 				5CC814FA1E32C80000198093 /* Main.storyboard in Resources */,
 			);
@@ -261,6 +299,7 @@
 			files = (
 				5CC814F71E32C80000198093 /* ViewController.swift in Sources */,
 				5CC814F51E32C80000198093 /* AppDelegate.swift in Sources */,
+				5CC815271E32D3DC00198093 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,10 +451,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4279D5HCP4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)/NativeCheckout.framework/Headers";
 				INFOPLIST_FILE = "sample-merchant-swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Paypal-Inc.sample-merchant-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = PYPLCheckoutBridge.h;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -424,10 +471,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4279D5HCP4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)/NativeCheckout.framework/Headers";
 				INFOPLIST_FILE = "sample-merchant-swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Paypal-Inc.sample-merchant-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = PYPLCheckoutBridge.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
