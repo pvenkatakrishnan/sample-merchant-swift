@@ -15,7 +15,7 @@
 		5CC8150A1E32C80000198093 /* sample_merchant_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC815091E32C80000198093 /* sample_merchant_swiftTests.swift */; };
 		5CC815151E32C80000198093 /* sample_merchant_swiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC815141E32C80000198093 /* sample_merchant_swiftUITests.swift */; };
 		5CC815271E32D3DC00198093 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC815261E32D3DC00198093 /* main.swift */; };
-		5CC8152B1E32D4CA00198093 /* NativeCheckout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC815231E32CF0000198093 /* NativeCheckout.framework */; };
+		5CC8152B1E32D4CA00198093 /* NativeCheckout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC815231E32CF0000198093 /* NativeCheckout.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		5CC8152C1E32D4CA00198093 /* NativeCheckout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC815231E32CF0000198093 /* NativeCheckout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5CC8152F1E32D64D00198093 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CC8152E1E32D64D00198093 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
@@ -68,7 +68,7 @@
 		5CC815231E32CF0000198093 /* NativeCheckout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NativeCheckout.framework; sourceTree = "<group>"; };
 		5CC815261E32D3DC00198093 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		5CC8152E1E32D64D00198093 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		5CC815311E32DAC900198093 /* PYPLCheckoutBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PYPLCheckoutBridge.h; sourceTree = "<group>"; };
+		5CC815381E3683D400198093 /* PYPLCheckoutBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYPLCheckoutBridge.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +122,7 @@
 		5CC814F31E32C80000198093 /* sample-merchant-swift */ = {
 			isa = PBXGroup;
 			children = (
+				5CC815381E3683D400198093 /* PYPLCheckoutBridge.h */,
 				5CC814F41E32C80000198093 /* AppDelegate.swift */,
 				5CC814F61E32C80000198093 /* ViewController.swift */,
 				5CC814F81E32C80000198093 /* Main.storyboard */,
@@ -129,7 +130,6 @@
 				5CC814FD1E32C80000198093 /* LaunchScreen.storyboard */,
 				5CC815001E32C80000198093 /* Info.plist */,
 				5CC815261E32D3DC00198093 /* main.swift */,
-				5CC815311E32DAC900198093 /* PYPLCheckoutBridge.h */,
 			);
 			path = "sample-merchant-swift";
 			sourceTree = "<group>";
@@ -461,9 +461,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Paypal-Inc.sample-merchant-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = PYPLCheckoutBridge.h;
-				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "sample-merchant-swift/PYPLCheckoutBridge.h";
 				SWIFT_VERSION = 3.0;
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -481,8 +481,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Paypal-Inc.sample-merchant-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = PYPLCheckoutBridge.h;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "sample-merchant-swift/PYPLCheckoutBridge.h";
 				SWIFT_VERSION = 3.0;
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};
